@@ -23,8 +23,8 @@ export const signup=async(req,res)=>{
         let token = await gentoken(user._id)
         res.cookie("token",token,{
             httpOnly:true,
-            secure:false,
-            sameSite:"Strict",
+            secure:true,
+            sameSite:"None",
             maxAge:7*24*60*1000
         })
         return res.status(201).json(user)
@@ -53,8 +53,8 @@ export const login=async(req,res)=>{
        let token = await gentoken(user._id)
         res.cookie("token",token,{
             httpOnly:true,
-            secure:false,
-            sameSite:"Strict",
+            secure:true,
+            sameSite:"None",
             maxAge:7*24*60*1000
         })
         return res.status(201).json({message:"login succesfilly"}) 
