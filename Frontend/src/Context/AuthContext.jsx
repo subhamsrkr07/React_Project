@@ -2,7 +2,7 @@ import React, { Children, createContext } from 'react'
 
 export const authDataContext = createContext()
 function AuthContext({children}) {
-    let serverurl = "http://localhost:8000"
+    let serverurl = "https://react-project-backend-5s0n.onrender.com" 
 
     let value = {
         serverurl
