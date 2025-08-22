@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router'
 import logo from "../assets/logo.jpg"
-import { authDataContext } from '../Context/authContext'
+import { authDataContext } from '../Context/AuthContext.jsx'
 import axios from 'axios'
 
 const Navbar = () => {
