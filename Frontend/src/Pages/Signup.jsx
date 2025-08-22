@@ -105,7 +105,7 @@
 import React, { useContext, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router';
-import { authDataContext } from '../Context/authContext';
+import { authDataContext } from '../Context/AuthContext.jsx';
 
 const Signup = () => {
   const [name, setName] = useState('');
