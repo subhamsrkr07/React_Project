@@ -56,7 +56,7 @@ const InfluncerDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/data/${id}`, { withCredentials: true })
+      .get(`https://react-project-backend-5s0n.onrender.com/api/data/${id}`, { withCredentials: true })
       .then(res => setInfluencer(res.data))
       .catch(err => console.error("Error fetching influencer:", err));
   }, [id]);
