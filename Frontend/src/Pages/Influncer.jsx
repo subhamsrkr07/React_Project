@@ -9,7 +9,7 @@ const Influncer = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/data/", { withCredentials: true })
+      .get("https://react-project-backend-5s0n.onrender.com/api/data/", { withCredentials: true })
       .then(res => setInfluncers(res.data))
       .catch(err => console.error("Error fetching data:", err));
   }, []);
