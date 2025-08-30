@@ -117,11 +117,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post(
-        serverurl + '/api/auth/signup',
-        { name, email, password },
-        { withCredentials: true }
-      );
+      // const result = await axios.post(
+      //   serverurl + '/api/auth/signup',
+      //   { name, email, password },
+      //   { withCredentials: true }
+      // );
       console.log(result.data);
       navigate("/"); 
     } catch (error) {
