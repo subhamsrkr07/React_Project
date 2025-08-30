@@ -98,7 +98,7 @@ const Login = () => {
           {/* Extra Links */}
           <p className="mt-6 text-sm text-center text-gray-500">
             Don’t have an account?{' '}
-            <a href="/signup" className="text-indigo-600 hover:underline">
+            <p className="text-indigo-600 hover:underline" onClick={()=>navigate("/signup")>
               Sign up here
             </a>
           </p>
