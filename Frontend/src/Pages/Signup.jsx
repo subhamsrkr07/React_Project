@@ -1,105 +1,4 @@
 
-// import React, { useContext, useState } from 'react'
-// import { authDataContext } from '../Context/authContext';
-// import axios from "axios"
-// import { useNavigate } from 'react-router';
-// import { motion } from "framer-motion";
-
-// const Signup = () => {
-//   let { serverurl } = useContext(authDataContext)
-//   let [name, setName] = useState("")
-//   let [email, setEmail] = useState("")
-//   let [password, setPassword] = useState("")
-//   let navigate = useNavigate()
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const result = await axios.post(serverurl + '/api/auth/signup', { name, email, password }, { withCredentials: true })
-//       console.log(result.data)
-//       navigate("/login") // Redirect after signup
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   };
-
-//   return (
-//     <div className="min-h-screen flex items-center justify-center bg-blue-400 px-4">
-//       <motion.div
-//         className="max-w-md w-full bg-white shadow-md rounded-lg p-8"
-//         initial={{ opacity: 0, y: 50 }}      // Start hidden & below
-//         animate={{ opacity: 1, y: 0 }}       // Fade in & slide up
-//         transition={{ duration: 0.6, ease: "easeOut" }}
-//       >
-//         <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">
-//           Create an Account
-//         </h2>
-//         <form onSubmit={handleSubmit} className="space-y-4">
-//           {/* Name */}
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name</label>
-//             <input
-//               type="text"
-//               name="name"
-//               onChange={(e) => setName(e.target.value)}
-//               value={name}
-//               placeholder="Your Name"
-//               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-//               required
-//             />
-//           </div>
-
-//           {/* Email */}
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Email</label>
-//             <input
-//               type="email"
-//               name="email"
-//               onChange={(e) => setEmail(e.target.value)}
-//               value={email}
-//               placeholder="you@example.com"
-//               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-//               required
-//             />
-//           </div>
-
-//           {/* Password */}
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Password</label>
-//             <input
-//               type="password"
-//               name="password"
-//               onChange={(e) => setPassword(e.target.value)}
-//               value={password}
-//               placeholder="••••••••"
-//               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-//               required
-//             />
-//           </div>
-
-//           {/* Submit Button with hover animation */}
-//           <motion.button
-//             type="submit"
-//             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
-//             whileHover={{ scale: 1.05 }}
-//             whileTap={{ scale: 0.98 }}
-//           >
-//             Sign Up
-//           </motion.button>
-//         </form>
-
-//         <p className="mt-4 text-center text-sm text-gray-600">
-//           Already have an account?{' '}
-//           <a href="/login" className="text-indigo-600 hover:underline">
-//             Login
-//           </a>
-//         </p>
-//       </motion.div>
-//     </div>
-//   )
-// }
-
-// export default Signup
 
 
 import React, { useContext, useState } from 'react'
@@ -117,11 +16,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const result = await axios.post(
-      //   serverurl + '/api/auth/signup',
-      //   { name, email, password },
-      //   { withCredentials: true }
-      // );
+      const result = await axios.post(
+        serverurl + '/api/auth/signup',
+        { name, email, password },
+        { withCredentials: true }
+      );
       console.log(result.data);
       navigate("/"); 
     } catch (error) {
